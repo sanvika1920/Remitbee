@@ -1,0 +1,88 @@
+/* ✅ Base Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ✅ Light Mode */
+body.light {
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  color: #000;
+}
+
+/* ✅ Dark Mode */
+body.dark {
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #fff;
+}
+
+/* ✅ Controls Bar */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ✅ Card Styles */
+.card {
+  text-align: center;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+body.dark .card {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ Avatar */
+.avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* ✅ Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+/* ✅ Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  color: gray;
+  background: rgba(0, 0, 0, 0.04);
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
+/* ✅ Dark Mode Footer Contrast */
+body.dark .footer {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
